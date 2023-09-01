@@ -1,0 +1,131 @@
+body {
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: block;
+    align-items: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.3);
+    z-index: -1; 
+}
+
+.navbar {
+    background-color:#242024;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+	color: #FFFFFF;
+	position:relative;
+	z-index: 1;
+    left: 650px;
+}
+
+
+.navbar-brand img {
+    width: 150px;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #FFFFFF;
+  }
+
+.navbar-nav .nav-link:after,
+.navbar-nav .nav-item.active .nav-link {
+    color: #E30220;
+}
+  
+.navbar-nav .nav-link:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 105%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #BF0000;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+  transition: .4s;
+}
+.navbar-nav .nav-link:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 135%;
+}
+
+  .containerB {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+  }
+  .box {
+    width: 20%;
+    height: 235px;
+    background-color: #242024;
+    margin: 20px;
+    margin-top: 200px;
+    box-sizing: border-box;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #777377;
+}
+
+
+.box i {
+    font-size: 100px;
+    margin-bottom: 40px;
+    color: #E30220;
+}
+
+  @media screen and (max-width:1200px) {
+    .box {
+        width: 40%;
+    }
+  }
+  @media screen and (max-width:600px) {
+    .box {
+        width: 90%;
+    }
+  }
